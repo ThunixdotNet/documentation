@@ -9,6 +9,7 @@ https://tildegit.org
 Tildegit is a web based source control system available for the tildeverse, that runs gitea.  Thunix uses tildegit.org for all source control.
 
 The following git repos are used:
+
 * ansible (https://tildegit.org/thunix/ansible)
 This repo stores the configuration spec for all machines comprising Thunix.  The repo consists of declarative YAML files that describes the state the machines should be in.
 
