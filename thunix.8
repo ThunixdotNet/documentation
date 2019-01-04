@@ -1,0 +1,34 @@
+.\" Manpage for Thunix.
+.\" Contact ubergeek@phoenix.thunix.cf to correct errors or typos.
+.TH man 8 "03 January 2019" "1.0" "Thunix man page"
+.SH NAME
+Thunix \- a public Linux server 
+.SH SYNOPSIS
+ssh phoenix.thunix.cf
+.SH DESCRIPTION
+Thunix is a publicly accesible Linux server, running Debian 9, and managed using ansible playbooks.
+
+There are many optional things to do on Thunix.  There is IRC chat availble with the weechat client.  Most build tools are available to you as well, to include git, make, gcc, go, python, and perl.  Mail facilties are also available for you to use via alpine, mutt, or even mailx.
+
+To enter chat, just type 'chat' and hit enter.  You'll be dropped into the #thunix chat room on the irc.tilde.chat network.
+
+You should create an account at tildegit.org, where Thunix's git repos are hosted, to include the system configuration definition files.
+
+Ansible is the tool we use to configure the systems that comprise Thunix.  Git and ansible are two tools your should familiarize yourself with.
+
+.SH Architecture
+The Thunix system consists of two servers, currently: phoenix and summit.
+
+Phoenix (phoenix.thunix.cf) hosts user home dirs, shell accounts, and various user tools and services (Such as ~ web space, chat client, email client, etc).  Phoenix is the nexus for users in the community.
+
+Summit (summit.thunix.cf) hosts the services that users might interact with, but don't require direct access to (ie, The Thunix home page, and in the future services such as SIP or XMPP services).  Users do not log into this machine, and the future-state goal is no users log into it, other than the automation system to manage it.
+
+Hourly, both machines reach out to tildegit, pull down the latest version of the configuration, and run the configuration tool, ensuring they are both in a known, and easily replicable state.
+
+All repos for system configuration, Thunix-supplied/ran code is hosted on tildegit.org.  Thunix users are recommended to create accounts on tildegit, and contribute pull requests to make their desired changes to the system, or very minimally, submit issues for problems and/or requests.
+.SH SEE ALSO
+ssh(8), weechat(8), git(8), make(8), gcc(8), go(8), python(8), perl(8), alpine(8), mutt(8), mailx(8), ansible-playbook(8), tildegit.org(8) 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Uber Geek (ubergeek@phoenix.thunix.cf)

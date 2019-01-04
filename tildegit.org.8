@@ -1,0 +1,26 @@
+.\" Manpage for tildegit.org
+.\" Contact ubergeek@phoenix.thunix.cf to correct errors or typos.
+.TH man 8 "03 January 2019" "1.0" "tildegit.org man page"
+.SH NAME
+tildegit.org \- a public web based source repository for the tildeverse 
+.SH SYNOPSIS
+https://tildegit.org
+.SH DESCRIPTION
+Tildegit is a web based source control system available for the tildeverse, that runs gitea.  Thunix uses tildegit.org for all source control.
+
+The following git repos are used:
+
+* ansible (https://tildegit.org/thunix/ansible)
+This repo stores the configuration spec for all machines comprising Thunix.  The repo consists of declarative YAML files that describes the state the machines should be in.
+
+* www (https://tildegit.org/thunix/www)
+This repo stores the source code that makes up the https:/thunix.cf website.  It's mostly php.
+
+* documentation (https://tildegit.org/thunix/documentation)
+This repo stores the man pages and accompanying documentation for the system.
+.SH SEE ALSO
+git(8), ansible(8) 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Uber Geek (ubergeek@phoenix.thunix.cf)
