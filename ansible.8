@@ -16,19 +16,22 @@ git clone git@ttm.sh:thunix/ansible.git
 From there, the typical github-type workflow is used:
 
 * Create a local branch, to track your issue's changes.
+
 * Commit changes to your local branch.
+
 * Send a URI pointing to your repo, with branch name to someone with merge permissions
 
 Inside of the tildegit interface:
 
 * Create a new branch, selecting option to create a branch and pull request
+
 * Make changes in your branch
+
 * Update PR
+
 * Wait for someone to merge your changes
 
 Hourly, a job runs that pulls the latest version of the repo, and the runs ansible-playbook against the playbook.  A sudoer can manually run this job, if desired, and it's located at /etc/cron.hourly/ansible-pull.
-
- 
 .SH SEE ALSO
 tildegit.org(8), git(8), ansible-playbook(8) 
 .SH BUGS
