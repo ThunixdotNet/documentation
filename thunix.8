@@ -4,18 +4,18 @@
 .SH NAME
 Thunix \- a public Linux server 
 .SH SYNOPSIS
-ssh phoenix.thunix.cf
+ssh thunix.cf
 .SH ADMINISTRATORS
 
 List of systems adminstratos are:
 
-* amcclure - Email: amcclure@phoenix.thunix.cf, amcclure@ttm.sh
+* amcclure - Email: amcclure@thunix.cf, amcclure@ttm.sh
              IRC: amcclure/irc.tilde.chat, amcclure/irc.freenode.net
 
-* naglfar  - Email: naglfar@phoenix.thunix.cf
+* naglfar  - Email: naglfar@thunix.cf
              IRC: amcclure/irc.tilde.chat, amcclure/irc.freenode.net
 
-* ubergeek - Email: ubergeek@phoenix.thunix.cf, ubergeek@yourtilde.com
+* ubergeek - Email: ubergeek@thunix.cf, ubergeek@yourtilde.com
            - IRC: ubergeek/irc.tilde.chat, ub3g33k/irc.freenode.net
 .SH DESCRIPTION
 Thunix is a publicly accesible Linux server, running Debian 9, and managed using ansible playbooks.
@@ -67,16 +67,13 @@ If you want to requestt for content you own the copyright for to be removed from
 
 Users that repeatedly infringe copyrights will have their account removed. Depending on the degree of the offense, their account may be removed immediately.
 .SH Architecture
-The Thunix system consists of two servers, currently: phoenix and summit.
+The Thunix system consists of one server, running Debian 9, which runs inside of an LXD container.  This allows for an out-of-band administration of the host, in case of configuration-gone-awry. 
 
-Phoenix (phoenix.thunix.cf) hosts user home dirs, shell accounts, and various user tools and services (Such as ~ web space, chat client, email client, etc).  Phoenix is the nexus for users in the community.
-
-Summit (summit.thunix.cf) hosts the services that users might interact with, but don't require direct access to (ie, The Thunix home page, and in the future services such as SIP or XMPP services).  Users do not log into this machine, and the future-state goal is no users log into it, other than the automation system to manage it.
-
-Hourly, both machines reach out to tildegit, pull down the latest version of the configuration, and run the configuration tool, ensuring they are both in a known, and easily replicable state.
+Hourly, thunix reaches out to tildegit, pull down the latest version of the configuration, and run the configuration tool, ensuring it is in a known, and easily replicable state.
 
 All repos for system configuration, Thunix-supplied/ran code is hosted on tildegit.org.  Thunix users are recommended to create accounts on tildegit, and contribute pull requests to make their desired changes to the system, or very minimally, submit issues for problems and/or requests.
 .SH SEE ALSO
 ssh(8), weechat(8), git(8), make(8), gcc(8), go(8), python(8), perl(8), alpine(8), mutt(8), mailx(8), ansible-playbook(8), tildegit.org(8) 
 .SH AUTHOR
-Uber Geek (ubergeek@phoenix.thunix.cf)
+Uber Geek (ubergeek@thunix.cf)
+amcclure (amcclure@thunix.cf)
