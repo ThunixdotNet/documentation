@@ -1,22 +1,26 @@
-backup(8) Thunix backup backup(8)
+.TH backup 8 "24 September 2021" 1.0 "Thunix backup"
 
-NAME backup - creating data backup script
+.SH NAME
+backup - creating data backup script
 
-SYNOPSIS backup
+.SH SYNOPSIS
+backup
 
-DESCRIPTION Thunix uses a daily cron job that runs /usr/local/bin/backup
+.SH DESCRIPTION
+Thunix uses a daily cron job that runs /usr/local/bin/backup
 script to store tar gzip compressed files located on local disk in BACKUP
 
-Cycle: full weekly and incrementals daily.
+Cycle: Full weekly and incrementals daily.
 
 Incremental backup restore process:
   First extract files from the full backup.
   Then extract files in the correct order from each incremental backup.
 
-BUGS No known bugs.
+.SH BUGS
+No known bugs.
 
-SEE ALSO tar(1), gzip(1), crontab(1), find(1), mysqldump(1)
+.SH SEE ALSO
+tar(1), gzip(1), crontab(1), find(1), mysqldump(1)
 
-AUTHOR Thunix Corporation (http://thunix.net)
-
-11.0 24 September 2021 backup(8)
+.SH AUTHOR
+The official Thunix wiki (http://wiki.thunix.net)
