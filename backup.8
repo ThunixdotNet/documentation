@@ -15,8 +15,11 @@ The files matching patterns listed in ~/.thunix/nobackup will be excluded.
 Cycle: Full weekly and incrementals daily.
 
 Incremental backup restore process:
-  First extract files from the full backup.
-  Then extract files in the correct order from each incremental backup.
+  Extract files from the full backup:
+   tar -x -f BACKUPS/DATE-full.tgz
+
+  Then, extract files in the correct order, up to DATE, from each incremental backup:
+   tar -x -g /dev/null -f BACKUPS/DATE-incremental.tgz
 
 .SH BUGS
 No known bugs.
