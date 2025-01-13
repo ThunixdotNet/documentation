@@ -1,6 +1,6 @@
 .\" Manpage for Thunix.
 .\" Contact root@thunix.net to correct errors or typos.
-.TH man 8 "28 November 2024" "1.7" "Thunix"
+.TH man 8 "12 November 2024" "1.7" "Thunix"
 .SH NAME
 Thunix \- a public Linux server 
 .SH SYNOPSIS
@@ -46,7 +46,7 @@ Thunix will never use proprietary software but users can do that if they wish. T
 Nothing is without its rules and regulations; thunix is no exception. Below are the site's service terms. Everything in this page should be clear to everyone who wishes to use thunix's services; 
 failure to abide by these terms can result in penalties such as service bans and may result in legal action against any offending users, depending on the severity of each case and any other individuals who may have been affected. Thunix may conduct investigations on any suspected violations, and we will cooperate with law enforcement agencies with their investigations. Be sure to read this page carefully and understand it.
 
-You are responsibe for checking your local mail account from time to time. This email address is the only one we retain, and as such, any warnings and notices regarding your account, or service status will be sent to this account.
+You are responsible for checking your local mail account from time to time. This email address is the only one we retain, and as such, any warnings and notices regarding your account, or service status will be sent to this account.
 
 	* Deliberately defacing the accounts of other users
 
@@ -76,11 +76,11 @@ If you want to request for content you own the copyright for to be removed from 
 
 Users that repeatedly violate the Terms of Service will have their account removed. Depending on the degree of the offense, their account may be removed immediately. These terms also apply to communication services such as forums, mailing lists, irc channels, newsgroups, and any other service either hosted on or used for thunix. If you come across anything that violates the terms of service, please let us know with the abuse reporting page (https://www.thunix.net/contact).
 .SH Architecture
-The Thunix system consists of one server, running Debian 9, which runs inside of an LXD container.  This allows for an out-of-band administration of the host, in case of configuration-gone-awry. 
+The Thunix system consists of one server, running Debian 12, which runs inside of an LXD container.  This allows for an out-of-band administration of the host, in case of configuration-gone-awry. 
 
-Hourly, thunix reaches out to tildegit, pull down the latest version of the configuration, and run the configuration tool, ensuring it is in a known, and easily replicable state.
+Hourly, thunix reaches out to github, pulls down the latest version of the configuration, and runs the configuration tool, ensuring it is in a known, and easily replicable state.
 
-All repos for system configuration, Thunix-supplied/ran code is hosted on tildegit.org.  Thunix users are recommended to create accounts on tildegit, and contribute pull requests to make their desired changes to the system, or very minimally, submit issues for problems and/or requests.
+All repos for system configuration, Thunix-supplied/ran code is hosted on https://github.com/ThunixdotNet.  Thunix users are recommended to create accounts on github.com, and contribute pull requests to make their desired changes to the system, or very minimally, submit issues for problems and/or requests.
 .SH SEE ALSO
 ssh(8), weechat(8), git(8), make(8), gcc(8), go(8), python(8), perl(8), alpine(8), mutt(8), mailx(8), ansible-playbook(8), tildegit.org(8) 
 .SH AUTHOR
